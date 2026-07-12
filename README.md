@@ -1,1 +1,1 @@
-# 7-wonders-
+Django assignment 1
