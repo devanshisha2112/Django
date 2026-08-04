@@ -1,0 +1,32 @@
+<!-- <html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Edit Students</h1>
+    <form method="post">
+        {% csrf_token %}
+        Name:
+        <input type="text" name="name" value="{{student.name}}"><br><br>
+        Email:
+        <input type="text" name="email" value="{{student.email}}"><br><br>
+        Mobile:
+        <input type="number" name="mobile" value="{{student.mobile}}"><br><br>
+        City:
+        <input type="text" name="city" value="{{student.city}}"><br><br>
+<button type="submit"> Edit </button>
+
+<a href="list">
+    <button type="button"> Back </button>
+</a>        
+    </form>
+</body>
+</html> -->
+
+<form method ="post">
+    <h2>Edit students from django forms</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>

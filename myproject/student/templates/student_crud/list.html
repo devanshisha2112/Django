@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Table data</h1>
+    <table border=1>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th> 
+                <th>Mobile</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <!-- <td>{{forloop.counter}}</td> -->
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.mobile}}</td>
+                <td>{{student.city}}</td>
+                <td>
+                <a href="{% url 'edit' student.id %}">Edit</a>
+                <a href="{% url 'delete' student.id %}" onclick="return confirm('delete this student?')"> Delete </a>
+                </td>
+
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+
+</html>
